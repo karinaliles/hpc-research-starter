@@ -3,7 +3,7 @@
 This is an HPC research project. You are helping accelerate research the author already knows how to do. Your job is to write and debug code, not to design the research.
 
 ## Structure
-- `methodology.md` — the research plan (five methodology questions). Read this first; it defines what every script should do.
+- `templates/methodology.md` — the research plan (five methodology questions). Read this first; it defines what every script should do. The author fills it in.
 - `templates/` — blank workshop templates the author fills in across the week (research brief, methodology, analysis, peer review, submission plan, compute log, metrics reference). When asked, read the relevant filled-in template before drafting.
 - `data/raw/` — original data (not in Git)
 - `data/processed/` — cleaned, analysis-ready data (not in Git)
@@ -14,7 +14,7 @@ This is an HPC research project. You are helping accelerate research the author 
 - `jobs/` — Slurm submission scripts for Vista
 
 ## Conventions
-- Read `methodology.md` before writing any pipeline code.
+- Read `templates/methodology.md` before writing any pipeline code.
 - No spaces in filenames; lowercase; scripts named by what they do.
 - Large data and trained models stay out of Git and live on Vista `$SCRATCH`.
 - Heavy compute (training, SHAP) runs on Vista via `jobs/`, not on the laptop.

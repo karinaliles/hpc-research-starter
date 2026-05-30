@@ -17,8 +17,7 @@ A starter scaffold for running your research on HPC with AI-assisted workflows. 
 | Path | What goes here |
 |---|---|
 | `CLAUDE.md` | Project context the AI reads. Keep it current so Claude Code knows your project. |
-| `methodology.md` | Your filled-in research plan. The AI reads this to write your scripts. (Blank master is in `templates/`.) |
-| `templates/` | Blank workshop templates: research brief, methodology, analysis, metrics reference, peer review, submission plan, compute log. Fill these in as you go; your AI prompts read them. |
+| `templates/` | Blank workshop templates: research brief, methodology, analysis, metrics reference, peer review, submission plan, compute log. Fill these in as you go; your AI prompts read them. `templates/methodology.md` is the one the pipeline scripts read. |
 | `data/raw/` | Original downloaded data. Not tracked in Git (lives on Vista `$SCRATCH`). |
 | `data/processed/` | Cleaned, joined, analysis-ready data. Not tracked in Git. |
 | `scripts/` | Your pipeline: download, build dataset, train, evaluate. |
@@ -37,8 +36,8 @@ pip install -r requirements.txt
 
 ## The workflow
 
-1. Fill in `methodology.md` (your five questions).
-2. Ask your AI tool: *"Read methodology.md and implement scripts/build_dataset.py to produce the analysis table described there."*
+1. Fill in `templates/methodology.md` (your five questions).
+2. Ask your AI tool: *"Read templates/methodology.md and implement scripts/build_dataset.py to produce the analysis table described there."*
 3. Stage data on Vista, submit `jobs/train.slurm` to the `gh` queue via Tapis.
 4. Read your metrics, generate figures, write the paper.
 
