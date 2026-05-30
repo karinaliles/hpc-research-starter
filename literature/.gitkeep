@@ -1,0 +1,7 @@
+# Your papers and PDFs go here. NOT tracked in Git, on purpose:
+#   - Copyrighted work should not be pushed to GitHub.
+#   - PDFs bloat the repo and eat your storage.
+#
+# Your library of record is Zotero, not this folder. On a new machine, just
+# recreate an empty literature/ folder; re-export or re-download from Zotero
+# as needed. Nothing here syncs through Git by design.

@@ -17,13 +17,15 @@ A starter scaffold for running your research on HPC with AI-assisted workflows. 
 | Path | What goes here |
 |---|---|
 | `CLAUDE.md` | Project context the AI reads. Keep it current so Claude Code knows your project. |
-| `methodology.md` | Your five methodology questions. The AI reads this to write your scripts. |
+| `methodology.md` | Your filled-in research plan. The AI reads this to write your scripts. (Blank master is in `templates/`.) |
+| `templates/` | Blank workshop templates: research brief, methodology, analysis, metrics reference, peer review, submission plan, compute log. Fill these in as you go; your AI prompts read them. |
 | `data/raw/` | Original downloaded data. Not tracked in Git (lives on Vista `$SCRATCH`). |
 | `data/processed/` | Cleaned, joined, analysis-ready data. Not tracked in Git. |
 | `scripts/` | Your pipeline: download, build dataset, train, evaluate. |
 | `notebooks/` | Interactive exploration. |
 | `results/` | Metrics, predictions, trained models. Not tracked in Git. |
 | `figures/` | Publication-quality figures (tracked; they go in the paper). |
+| `literature/` | Your papers and PDFs. Kept local, **not** in Git (copyrighted work shouldn't go to GitHub, and PDFs eat storage). Your library of record is Zotero; on a new machine just recreate an empty `literature/` folder. |
 | `jobs/` | Slurm/Tapis job submission scripts for Vista. |
 
 ## Setup

@@ -2,6 +2,8 @@
 data/raw/*
 data/processed/*
 results/*
+# Literature PDFs stay local: copyrighted work does not belong on GitHub, and PDFs bloat the repo
+literature/*
 !**/.gitkeep
 
 # Figures and notebooks are tracked (small, go in the paper)

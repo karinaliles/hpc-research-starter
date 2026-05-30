@@ -4,11 +4,13 @@ This is an HPC research project. You are helping accelerate research the author 
 
 ## Structure
 - `methodology.md` — the research plan (five methodology questions). Read this first; it defines what every script should do.
+- `templates/` — blank workshop templates the author fills in across the week (research brief, methodology, analysis, peer review, submission plan, compute log, metrics reference). When asked, read the relevant filled-in template before drafting.
 - `data/raw/` — original data (not in Git)
 - `data/processed/` — cleaned, analysis-ready data (not in Git)
 - `scripts/` — `download_data.py`, `build_dataset.py`, `train_model.py`, `evaluate.py`
 - `results/` — `metrics.json`, predictions, trained models (not in Git)
 - `figures/` — publication-quality figures (300 DPI, labeled axes)
+- `literature/` — papers and PDFs (local only, not in Git; library of record is Zotero)
 - `jobs/` — Slurm submission scripts for Vista
 
 ## Conventions
