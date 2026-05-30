@@ -21,6 +21,6 @@ This is an HPC research project. You are helping accelerate research the author 
 - Save figures to `figures/` at 300 DPI with labeled axes and a colorblind-friendly palette.
 
 ## How to help
-- When asked to build the pipeline, follow `methodology.md` exactly.
+- When asked to build the pipeline, follow `templates/methodology.md` exactly.
 - Verify any citations or factual claims; do not invent references.
 - When a step needs HPC, write or edit a Slurm script in `jobs/` rather than running it locally.
