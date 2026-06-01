@@ -2,7 +2,7 @@
 
 **Name:** Karina Liles, PhD
 **Date:** 
-**Institution:**
+**Institution:** Claflin University
 **Discipline:**
 
 ---
