@@ -19,16 +19,20 @@ You need your own copy so you can save your work. Either way below, **your copy 
 | Pull my updates during the week? | **Yes, one click** | Not automatically (you would connect it by hand) |
 | Best for | **This workshop** | A standalone project later |
 
-**For this week, choose Fork.** You will be able to pull any updates I push during the workshop with one click.
+**For this week, choose Fork.** You will be able to pull any updates I push during the workshop with one click. Fork whichever way is comfortable for you.
 
-1. On the repo page, click **Fork** (top right) → **Create fork**. This makes your copy at `your-username/hpc-research-starter`.
-2. Optional, if you want help during the workshop: your fork → **Settings → Collaborators → add `ashleyscruse`**. Your work stays yours; this just lets me look when you are stuck.
+**Fork on the web (point and click):**
 
-**Prefer the command line?** One command forks *and* downloads it (and links it back to mine), no web clicks:
+1. On the repo page, click **Fork** (top right) → **Create fork**.
+2. Your copy appears at `your-username/hpc-research-starter`. Continue to Step 2 to copy it to your computer.
+
+**Fork from the command line (one step):**
 ```
 gh repo fork ashleyscruse/hpc-research-starter --clone
 ```
-This needs the GitHub CLI (`gh`) installed and `gh auth login` done first (see Step 2, Option C). If you use this, you can skip Step 2.
+This forks it to your account, downloads it to your computer, and links it back to mine, all at once. It needs the GitHub CLI (`gh`) installed and `gh auth login` done first (see Step 2, Option C). If you use this, you can skip Step 2.
+
+**Want help during the workshop?** On your fork, go to **Settings → Collaborators → add `ashleyscruse`**. Your work stays yours; this just lets me look when you are stuck.
 
 ## Step 2: Get it onto your computer
 
