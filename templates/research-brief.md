@@ -1,7 +1,7 @@
 # Research Brief
 
-**Name:**
-**Date:**
+**Name:** Karina Liles, PhD
+**Date:** 
 **Institution:**
 **Discipline:**
 
