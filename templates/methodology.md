@@ -4,52 +4,81 @@
 **Date:**
 **Research Question:** _(copy from Research Brief)_
 
+This is your project's plan. Your AI tools read it to help you build, so be specific. It works for any kind of HPC computation, not only machine learning.
+
 ---
 
-## 1. What Goes In?
+## 1. What Is Your Computation?
 
-**Unit of analysis:** Each row in my final table represents a _______________
+What kind of computation does your research need? Check the one that fits best (you can combine):
 
-**Datasets:**
+- [ ] **Machine learning / predictive model** — predict or classify an outcome from data
+- [ ] **Simulation or numerical model** — model how a system behaves over time or under conditions
+- [ ] **Large-scale data processing / pipeline** — clean, join, or transform data too big for a laptop
+- [ ] **Statistical analysis** — test relationships or differences at scale (regression, Bayesian, bootstrapping)
+- [ ] **Optimization / parameter sweep** — search many configurations for the best one
+- [ ] **Other / domain-specific:** _______________
+
+**In one sentence, what will your computation do?**
+
+
+
+---
+
+## 2. What Goes In?
+
+**Unit of analysis:** Each row or record represents a _______________
+
+**Data sources:**
 
 | Dataset | Source | Key Variables Used | Join Key |
 |---------|--------|--------------------|----------|
 | | | | |
 | | | | |
-| | | | |
 
-**Final table dimensions:** ~______ rows x ______ columns
+**Approximate size:** ~______ records x ______ variables
 
-**Data quality notes:** _(missing values, suppressed cells, temporal/spatial alignment issues)_
-
+**Data quality notes:** _(missing values, gaps, alignment issues)_
 
 
----
-
-## 2. What Comes Out?
-
-**I am predicting/classifying:** _________________________________
-
-**Outcome variable name:** _________________________________
-
-**Outcome type:**
-- [ ] Continuous (a number)
-- [ ] Binary (yes/no, high/low)
-- [ ] Multi-class (3+ categories)
-- [ ] Time series
-- [ ] Clusters/patterns
 
 ---
 
-## 3. What Features Matter?
+## 3. What Comes Out?
+
+**What does your computation produce?** _(a prediction, a simulated dataset, a processed table, a statistical result, an optimal configuration, etc.)_
+
+
+
+**Form of the output:**
+- [ ] A number (continuous)
+- [ ] A category or label
+- [ ] A time series
+- [ ] Clusters or patterns
+- [ ] A simulated or processed dataset
+- [ ] A statistical result (effect size, interval, posterior, etc.)
+- [ ] Other: _______________
+
+---
+
+## 4. What Is Your Method?
+
+**The approach you will use:** _________________________________
+
+**Why this approach over alternatives:** _________________________________
+
+**Your baseline or point of comparison:** _(the simpler result you compare against)_
+
+
+
+### If your computation is machine learning
+
+_Skip this block if you are not training a model._
 
 **Standard features (from raw data):**
 
 | Feature | Source Dataset | Type |
 |---------|---------------|------|
-| | | Continuous / Categorical |
-| | | Continuous / Categorical |
-| | | Continuous / Categorical |
 | | | Continuous / Categorical |
 | | | Continuous / Categorical |
 
@@ -58,55 +87,37 @@
 | Feature | How It's Computed | Why It Matters |
 |---------|-------------------|----------------|
 | | | |
-| | | |
-| | | |
 
-**Which features are novel?** _(These are often the publishable contribution)_
+**Which features are novel?** _(often the publishable contribution)_
 
+**Baseline model:** ____________   **Primary model:** ____________
 
-
----
-
-## 4. What Models and Why?
-
-**Baseline model:** _________________________________
-
-**Why:** _________________________________
-
-**Primary model:** _________________________________
-
-**Why this over alternatives:** _________________________________
-
-**Additional model(s) (if time allows):** _________________________________
-
-**Interpretability approach:** 
-- [ ] SHAP values
-- [ ] Feature importance (built-in)
-- [ ] Partial dependence plots
-- [ ] Other: _________________________________
+**Interpretability approach:** SHAP / built-in feature importance / partial dependence / other: ____________
 
 ---
 
 ## 5. How Do You Know It Worked?
 
-**Train/test split strategy:**
-- [ ] 80/20 random split
-- [ ] K-fold cross-validation (k = ___)
-- [ ] Temporal split (train on years ___, test on years ___)
-- [ ] Other: _________________________________
+Match your evaluation to your method:
 
-**Evaluation metrics:**
+- **Machine learning:** train/test split, metrics (RMSE, accuracy, F1, AUC), comparison to baseline
+- **Simulation:** validation against known cases, convergence, sensitivity analysis
+- **Data pipeline:** correctness and completeness checks, reproducibility
+- **Statistics:** significance, effect size, model fit, assumptions checked
+- **Optimization:** objective value, comparison to the baseline configuration
 
-| Metric | Why This Metric |
+**Your evaluation plan:**
+
+| What you check | Why |
 |--------|-----------------|
 | | |
 | | |
 
-**What does a "good" result look like?** _(What R-squared, accuracy, or F1 would be worth publishing?)_
+**What does a "good" result look like for your question?**
 
 
 
-**What would a "bad" result tell you?** _(Would it still be publishable as a negative finding?)_
+**Would a negative or null result still be worth reporting?**
 
 
 
@@ -114,14 +125,14 @@
 
 ## Data Pipeline Diagram
 
-_Draw or describe the flow from raw data to final results. Show each dataset, how they join, where features are engineered, and where the model runs._
+_Draw or describe the flow from inputs to results. Show each source, how they combine, where the heavy compute happens, and what comes out._
 
 ```
-[Dataset A] ---\
-                \
-[Dataset B] -----> [JOIN on ___] --> [Feature Engineering] --> [Model] --> [Results]
-                /
-[Dataset C] ---/
+[Input A] ---\
+              \
+[Input B] -----> [Combine / process] --> [Your computation] --> [Results]
+              /
+[Input C] ---/
 ```
 
 ---
@@ -131,11 +142,10 @@ _Draw or describe the flow from raw data to final results. Show each dataset, ho
 | Step | What Happens | Where | Queue | Estimated Time |
 |------|-------------|-------|-------|----------------|
 | Data download | | Laptop / Login node | N/A | |
-| Data cleaning | | | | |
-| Feature engineering | | | | |
-| Model training | | | | |
-| Evaluation / SHAP | | | | |
-| Visualization | | | | |
+| Preprocessing | | | | |
+| Main computation | | Vista | gh | |
+| Evaluation / analysis | | | | |
+| Visualization | | Laptop / Jupyter | N/A | |
 
 **Total estimated allocation usage:** ______ node-hours
 
@@ -143,11 +153,11 @@ _Draw or describe the flow from raw data to final results. Show each dataset, ho
 
 ## Self-Check
 
-Before moving to Stage 3 (Compute), confirm:
+Before moving to Compute, confirm:
 
-- [ ] My methodology is specific enough that someone else would know exactly how to run this study
-- [ ] I have identified the join keys between my datasets
-- [ ] I have chosen models with a clear justification (not just "it's popular")
-- [ ] I have an evaluation plan with specific metrics
-- [ ] I know which steps need HPC and which don't
-- [ ] My computational plan accounts for the time I have on Vista this week
+- [ ] I have named what kind of computation this is
+- [ ] My method is specific enough that someone else could run this study
+- [ ] I have identified how my data sources connect
+- [ ] I have a clear way to tell whether the result is good
+- [ ] I know which steps need HPC and which do not
+- [ ] My plan fits the time I have on Vista this week
