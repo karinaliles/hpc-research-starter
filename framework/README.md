@@ -1,11 +1,12 @@
 # Framework — community evaluation rubric + prompt set
 
-This folder holds the two artifacts the evaluation pipeline reads:
+This folder holds the artifacts the evaluation pipeline reads:
 
 - `scoring-rubric.md` — the three dimensions (effectiveness, equity, trustworthiness) and their
   12 sub-criteria, scored 1–5.
-- `community-prompts.csv` — the evaluation prompts (columns: `prompt_id`, `domain`,
-  `primary_dimension`, `high_stakes`, `prompt_text`).
+- `community-prompts.csv` — authored evaluation prompts (60 seed prompts, 10 domains).
+- `bbq-seeded-prompts.csv` — real BBQ items (CC-BY 4.0) seeded as benchmark-linked, dual-scoreable prompts.
+- `data-spec.md` — the three linked tables (prompts → responses → scores), provenance, and IRB notes.
 
 ## ⚠️ Status: expert-drafted starter — not yet community-validated
 
