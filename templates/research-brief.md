@@ -72,38 +72,40 @@ of local relevance this work aims to correct.
 
 ## 3. Data Sources
 
-> _TO DO (Karina). Three data types identified; details to be filled in later:_
-> 1. _Community-grounded prompt/criteria set — built with the HBCU community (novel, core contribution). Collection method TBD (focus group / survey / expert-drafted)._
-> 2. _Generative model outputs — produced by running open models on Vista (generated, not downloaded)._
-> 3. _Standard benchmark — an existing public eval set, for comparison. Specific set TBD._
+> **Decisions (Step 1):** Prompt-gathering = **expert-drafted starter set, then community-validated**
+> via a Claflin focus group/survey. Standard benchmark = **BBQ** (equity-focused, hand-built, QA
+> format, tractable for a one-week pilot; HELM fairness/bias as optional broader comparison). The
+> draft rubric + prompts live in `framework/` and await community validation.
 
-**Primary dataset:**
+**Primary dataset:** _(the novel, core contribution)_
 
 | Field | Details |
 |-------|---------|
-| Name | |
-| Source URL | |
-| Format | |
-| Size | |
-| Key variables | |
-| Geographic scope | |
-| Temporal scope | |
-| Access method | |
-| Known limitations | |
+| Name | Community-grounded prompt set + scoring rubric (HBCU context) |
+| Source URL | Local: `framework/community-prompts.csv`, `framework/scoring-rubric.md` |
+| Format | CSV (prompts) + markdown rubric (12 sub-criteria across 3 dimensions, 1–5) |
+| Size | 60 draft prompts across 10 domains → expand to ~150 during community validation |
+| Key variables | prompt_id, domain, primary_dimension, high_stakes, prompt_text |
+| Geographic scope | HBCU community; local context anchored to Orangeburg, SC (Claflin) |
+| Temporal scope | 2026 (current) |
+| Access method | Authored in-project; community-validated via focus group/survey |
+| Known limitations | Expert-drafted starter, not yet community-authored; small N until validated; author bias until reviewed |
 
 **Supporting dataset(s):**
 
 | Field | Dataset 2 | Dataset 3 |
 |-------|-----------|-----------|
-| Name | | |
-| Source URL | | |
-| Format | | |
-| Key variables | | |
-| Join key | | |
+| Name | Open generative models (model outputs) | BBQ — Bias Benchmark for Question Answering |
+| Source URL | Hugging Face (Llama, Mistral/Mixtral, Qwen, Gemma) | https://github.com/nyu-mll/BBQ (Parrish et al. 2022) |
+| Format | Generated text responses | Hand-built QA items + bias scores |
+| Key variables | model_id, response text, sampling settings | item_id, category, bias score |
+| Join key | prompt_id | prompt_id / item_id |
 
 **How do the datasets connect?**
 
-_Describe the join key (FIPS code, date, lat/lon, etc.) and any spatial or temporal alignment needed._
+The prompt set (Dataset 1) is the spine: each prompt (`prompt_id`) is run through each open model
+(Dataset 2) to produce responses, which are scored on the community rubric **and** mapped to the BBQ
+benchmark (Dataset 3) for the standard comparison. Join key throughout is `prompt_id`.
 
 
 

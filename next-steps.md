@@ -8,15 +8,16 @@ From setup → submitted paper. Checked items are done; work top-down.
 - [x] Literature — 15 papers organized in `literature/` + 16 items in Zotero
 - [x] Git/GitHub — working and backed up
 
-## Step 1 — Close the two open decisions *(mine; ~30 min each, no Vista needed)*
-- [ ] Choose the **prompt-gathering method** (focus group / survey of Claflin students & faculty / expert-drafted starter set)
-- [ ] Pick the **standard benchmark** to compare against (HELM / BBQ / a slice of one)
-- [ ] Fill in the parked data-source details in `templates/research-brief.md` (section 3)
+## Step 1 — Close the two open decisions ✅ *(decided; recorded in brief §3 + framework/README.md)*
+- [x] **Prompt-gathering method:** expert-drafted starter set, then community-validated (Claflin focus group/survey)
+- [x] **Standard benchmark:** BBQ (HELM fairness/bias as optional broader comparison)
+- [x] Filled in the data-source details in `templates/research-brief.md` (section 3)
 
-## Step 2 — Build the community prompt set + scoring rubric *(mine + community)*
-- [ ] Draft ~150 prompts grounded in HBCU community needs
-- [ ] Turn the three dimensions (effectiveness, equity, trustworthiness) into concrete, scorable sub-criteria — a rubric
-- [ ] Document the prompt set like a "datasheet" (template: Gebru et al., in `literature/04-documentation-standards/`)
+## Step 2 — Build the community prompt set + scoring rubric ✅ DRAFT *(awaiting community validation)*
+- [x] Drafted 60 seed prompts across 10 HBCU-relevant domains → `framework/community-prompts.csv` (expand to ~150 during validation)
+- [x] Built the scoring rubric: 12 sub-criteria across the 3 dimensions, 1–5 → `framework/scoring-rubric.md`
+- [x] Documented the set/rubric (datasheet-style) → `framework/README.md`
+- [ ] **Community validation (yours):** Claflin focus group/survey to review, revise, and approve the rubric + prompts, and expand to ~150
 
 ## Step 3 — Set up on Vista *(mid-week compute guide helps)*
 - [ ] Confirm allocation/login; move data to `$SCRATCH`
