@@ -62,11 +62,11 @@ of local relevance this work aims to correct.
 
 | # | Title | Authors | Year | Key Finding |
 |---|-------|---------|------|-------------|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+| 1 | Evaluating AI-Generated Images of Cultural Artifacts with Community-Informed Rubrics ([arXiv:2604.02406](https://arxiv.org/abs/2604.02406)) | Johnson, Sudharsan, Hamna, Dalal, Holroyd, Thieme, Heidari, Massiceti, Wortman Vaughan, Morrison | 2026 | Community members design rubrics, then operationalize them in automated pipelines; automating measurement is in tension with capturing community perspectives. Nearest neighbor (images; method extends to text + HBCU context). |
+| 2 | Envisioning Communities: A Participatory Approach Towards AI for Social Good ([arXiv:2105.01774](https://arxiv.org/abs/2105.01774)) | Bondi, Xu, Acosta-Navas, Killian (AIES) | 2021 | Introduces the PACT framework — affected communities should define "social good" and be partners throughout, using the capabilities approach to measure welfare equity. |
+| 3 | Participatory Co-Design and Evaluation of Generative AI-Integrated Coursework Assessment in Higher Education ([PMC12189063](https://pmc.ncbi.nlm.nih.gov/articles/PMC12189063/)) | Behavioral Sciences (MDPI), 15(6):808 | 2025 | A transferable participatory co-design method with new criteria for evaluating critical engagement with AI outputs in education. |
+| 4 | Holistic Evaluation of Language Models (HELM) ([arXiv:2211.09110](https://arxiv.org/abs/2211.09110)) | Liang et al., Stanford CRFM (verify full author list) | 2022 | Leading generic benchmark — 7 metrics × 16 scenarios across 30 models. The "average-user" evaluation this work pushes against (baseline). |
+| 5 | BBQ: A Hand-Built Bias Benchmark for Question Answering ([arXiv:2110.08193](https://arxiv.org/abs/2110.08193)) | Parrish et al., NYU (ACL Findings) | 2022 | Models lean on social stereotypes when context is under-informative, across nine U.S. social dimensions. A standard fairness benchmark, defined by researchers rather than communities. |
 
 ---
 
